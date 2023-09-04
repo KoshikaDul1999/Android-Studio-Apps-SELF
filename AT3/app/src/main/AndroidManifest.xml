@@ -20,6 +20,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ActivityTwo">
+            <!-- You can add an intent-filter here if ActivityTwo is supposed to be launched by an intent -->
+        </activity>
     </application>
 
 </manifest>
