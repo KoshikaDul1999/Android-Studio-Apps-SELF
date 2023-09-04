@@ -23,6 +23,7 @@ public class ActivityTwo extends AppCompatActivity {
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("USER_NAME");
+        int age = intent.getIntExtra("USER_AGE",0);
 
         textUserName.setText(name);
 
