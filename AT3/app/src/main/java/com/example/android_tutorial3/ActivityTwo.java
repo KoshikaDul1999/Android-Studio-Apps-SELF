@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ActivityTwo extends AppCompatActivity {
 
     Button button;
-    TextView textUserName;
+    TextView textUserName, textUserAge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,14 @@ public class ActivityTwo extends AppCompatActivity {
 
         button = findViewById(R.id.btn2);
         textUserName = findViewById(R.id.textUserName);
+        textUserAge = findViewById(R.id.txtUserAge);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("USER_NAME");
         int age = intent.getIntExtra("USER_AGE",0);
 
         textUserName.setText(name);
+        textUserAge.setText(String.valueOf(age));
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
