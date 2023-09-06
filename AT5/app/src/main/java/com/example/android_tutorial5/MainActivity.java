@@ -31,13 +31,12 @@ public class MainActivity extends AppCompatActivity {
 //        intent.putExtras(extras);
         
         Intent intent = new Intent(Intent.ACTION_SEND);
-        final Intent chooser;
         intent.setData(Uri.parse("mailto:"));
         intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"test@gmail.com"});
         intent.putExtra(Intent.EXTRA_SUBJECT, "This is our test subject");
         intent.putExtra(Intent.EXTRA_TEXT, "This is our test email body");
         intent.setType("message/rfc822");
-        intent.createChooser(intent, "Send email test app");
+        Intent chooser =  intent.createChooser(intent, "Send email test app");
         
 
         button.setOnClickListener(new View.OnClickListener() {
