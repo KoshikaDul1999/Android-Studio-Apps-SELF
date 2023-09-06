@@ -21,8 +21,13 @@ public class MainActivity extends AppCompatActivity {
         String name = "Koshika Dulanjana";
         int age = 24;
 
-        intent.putExtra("USER_NAME",name);
-        intent.putExtra("USER_AGE",age);
+//        intent.putExtra("USER_NAME",name);
+//        intent.putExtra("USER_AGE",age);
+        Bundle extras = new Bundle();
+        extras.putString("USER_NAME", name);
+        extras.putInt("USER_AGE", age);
+
+        intent.putExtras(extras);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
